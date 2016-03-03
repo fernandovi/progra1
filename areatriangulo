@@ -1,0 +1,29 @@
+// areatriangulo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "Math.h"
+using namespace std;
+void main()
+
+{
+	float a,b,c,p,area;
+	cout<<"ingrese los lados del triangulo";
+
+	cout<<"ingrese el valor de a:";
+	cin>>a;
+	cout<<"ingrese el valor de b:";
+	cin>>b;
+	cout<<"ingrese el valor de c:";
+	cin>>c;
+	p=(a+b+c)/2;
+	area= sqrt(p*(p-a)*(p-b)*(p-c));
+	cout<<"perimetro es igual a:";
+	cout<<p;   
+	cout<<"el area es: ";
+	cout<<area;
+	cout<<"GRACIAS POR SU PREFERENCIA";
+	getch();
+}
