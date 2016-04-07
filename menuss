@@ -1,0 +1,61 @@
+// menus.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#define IVA 0.13
+#define AFP 0.1271
+using namespace std;
+void main()
+{
+	int n,opcion,i,op;
+	float sn,sb,a,b,x;
+	do {
+		cout<<"\t\t MENU"<<endl;
+		cout<<"1. Salario"<<endl;
+		cout<<"2. Suma"<<endl;
+		cout<<"0. Salir"<<endl;
+		cout<<"Opcion: ";
+		cin>>opcion;
+		cout<<endl;
+		switch (opcion)
+		{
+		case 1:
+			{
+				cout<<"Ingrese el numero de empleados:  ";
+				cin>>n;
+				cout<<endl;
+				for (i=1;i<=n;i++)
+				{
+					cout<<"Ingrese el salario bruto:  ";
+					cin>>sb;
+					if (sb>=7000)
+						sn=sb-((IVA+AFP)*sb);
+					else
+						sn=sb-(AFP*sb);
+					cout<<"El salario bruto es:  ";
+					cout<<sn<<endl<<endl;
+				}
+				;break;
+				getch();
+			}
+		case 2:{
+				cout<<"Digite el valor de a:  ";
+				cin>>a;
+				cout<<"Digite el valor de b:  ";
+				cin>>b;
+				x=a+b;
+				cout<<"La suma es:  ";
+				cout<<x<<endl;break;
+			   }
+		case 0:{
+			cout<<"Salir";
+			break;getch();}
+		default: cout<<"Opcion invalida"<<endl;
+		}
+	}
+	while (opcion!=0);
+	getch();
+}
