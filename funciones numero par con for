@@ -1,0 +1,34 @@
+// funcioneconfor.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+bool num_par(int a);
+using namespace std;
+void main()
+{
+	bool z;
+	int numero,n,i;
+	cout<<"ingrese el numero de cuantas veces quiere repetir:  ";
+	cin>>n;
+	for (i=1;i<=n;i++)
+		{
+		cout<<"Ingrese numero:  ";
+		cin>>numero;
+		z=num_par(numero);
+		if (z)
+			cout<<"Es par "<<endl;
+		else
+			cout<<"Es impar"<<endl;
+		}
+	cout<<"Gracias por su preferencia";
+	getch();
+}
+bool num_par(int a)
+{
+	if (a%2==0)
+		return true;
+	else
+		return false;
+}
