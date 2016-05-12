@@ -58,6 +58,7 @@ void main()
 			}
 		default: {cout<<"Opcion invalida"<<endl;break;getch();}
 		}getch();
+		system ("cls");
 	}while(opcion!=0);
 	getch();
 }
@@ -86,5 +87,4 @@ int MCD (int m, int n)
 	else 
 		return(MCD(n,r));
 }
-
 
