@@ -11,11 +11,11 @@ void potencia(float x, int y, float&z);
 int MCD(int m, int n);
 void main()
 {
-	system("color 9B");
+	system("color 1B");
 	int opcion,pot,n,m;
 	float x,lado,y,base,z;
 	do{
-		cout<<"			MENU"<<endl;
+		cout<<"				MENU"<<endl;
 		cout<<"1. area del cuadrado  "<<endl;
 		cout<<"2. calcular la potencia"<<endl;
 		cout<<"3. encontrar el MCD de dos numeros"<<endl;
@@ -58,7 +58,9 @@ void main()
 			}
 		default: {cout<<"Opcion invalida"<<endl;break;getch();}
 		}getch();
+		if (opcion>0)
 		system ("cls");
+
 	}while(opcion!=0);
 	getch();
 }
@@ -87,4 +89,3 @@ int MCD (int m, int n)
 	else 
 		return(MCD(n,r));
 }
-
